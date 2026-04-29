@@ -611,27 +611,6 @@
   </ul>
   <span class="footer-copy">© 2026 · San Bernardino, CA</span>
 </footer>
-
-<script>
-  const projects = document.querySelectorAll('.project');
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.08 });
-  projects.forEach(p => io.observe(p));
-
-  const sections = document.querySelectorAll('section[id]');
-  const links = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let cur = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 160) cur = s.id; });
-    links.forEach(a => {
-      const h = a.getAttribute('href').replace('#','');
-      a.classList.toggle('active', h === cur || (cur === 'home' && h === 'work'));
-    });
-  }, { passive: true });
 </script>
-
 </body>
 </html>
