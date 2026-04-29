@@ -631,12 +631,6 @@
       a.classList.toggle('active', h === cur || (cur === 'home' && h === 'work'));
     });
   }, { passive: true });
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    document.getElementById('form-success').style.display = 'block';
-    e.target.querySelectorAll('input,textarea,select,button').forEach(el => el.disabled = true);
-  }
 </script>
 
 </body>
